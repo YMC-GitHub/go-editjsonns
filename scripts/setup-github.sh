@@ -123,16 +123,13 @@ create_ssh_key() {
 # 配置 SSH 配置文件
 configure_ssh() {
     echo "=== 2. 配置 SSH 配置文件 ==="
-    if grep -q "github.com-${REPO_NAME}" ~/.ssh/config; then
-        echo "SSH 配置已存在，跳过"
-    else
-        cat >> ~/.ssh/config << EOF
-Host github.com-${REPO_NAME}
+        cat > ~/.ssh/config << EOF
+Host github.com
     HostName github.com
     User git
     IdentityFile ~/.ssh/${SSH_KEY_NAME}
 EOF
-    fi
+    cat ~/.ssh/config
 }
 
 # 创建 GitHub 仓库
@@ -145,8 +142,8 @@ create_github_repo() {
 # 添加部署密钥
 add_deploy_key() {
     echo "=== 4. 添加部署密钥 ==="
-    git init
-    git remote add origin git@github.com:${GITHUB_USERNAME}/${REPO_NAME}.git
+    # git init
+    # git remote add origin git@github.com:${GITHUB_USERNAME}/${REPO_NAME}.git
     gh repo deploy-key add ~/.ssh/${SSH_KEY_NAME}.pub --title "${SSH_KEY_NAME}" --allow-write
 }
 

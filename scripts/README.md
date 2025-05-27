@@ -208,5 +208,6 @@ git add go.mod; git commit -m "build(core): set this project"
 git add CHANGELOG.md; git commit -m "docs(core): set note for changelog"
 git add README.md; git commit -m "docs(core): set readme for this repo"
 
+git add scripts ; git commit -m "build(core): put scripts for ssh.config.gh"
 
 ```
