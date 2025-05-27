@@ -210,4 +210,11 @@ git add README.md; git commit -m "docs(core): set readme for this repo"
 
 git add scripts ; git commit -m "build(core): put scripts for ssh.config.gh"
 
+git add pkg/jsonns; git commit -m "docs(core): add function tip for NSStd"
+
+git add pkg/jsonctx; git commit -m "build(core): code jsonctx in workspace"
+
+git add go.mod; git commit -m "build(core): use project jsonns in workspace"
+git add README.md; git commit -m "docs(core): add note for jsonctx in root readme"
+
 ```
