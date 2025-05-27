@@ -1,0 +1,46 @@
+*.sh linguist-detectable=false
+*.ps1 linguist-language=false
+*.py linguist-detectable=false
+*.md linguist-detectable=false
+*.html linguist-detectable=false
+# *.js linguist-detectable=false
+*.css linguist-detectable=false
+
+# Auto detect text files and perform LF normalization
+* text=auto eol=lf
+
+
+# Go files
+*.go text diff=golang
+
+# Documentation
+*.md text diff=markdown
+*.txt text
+LICENSE text
+
+# Docker
+Dockerfile text
+*.dockerfile text
+.dockerignore text
+
+# Scripts
+*.sh text eol=lf
+*.bash text eol=lf
+
+# Configs
+*.json text
+*.yaml text
+*.yml text
+.editorconfig text
+.gitattributes text
+.gitignore text
+.dockerignore text
+
+# Binary files
+*.exe binary
+*.dll binary
+*.so binary
+*.dylib binary
+*.zip binary
+*.tar binary
+*.gz binary 
