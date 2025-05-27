@@ -1,3 +1,3 @@
-module github.com/ymc-github/go-editjsonns
+module go-editjsonns
 
 go 1.21 
