@@ -67,7 +67,23 @@ func NSGetMatch(s string, reg *regexp.Regexp, preset string) []string {
 	return reg.FindAllString(s, -1)
 }
 
-// NSStd standardizes a namespace string into its components
+// NSStd standardizes a namespace string into its path components
+//
+// Parameters:
+//
+//	s - input path string (e.g. "a.b.c", "users[0].name")
+//	sep - separator character (defaults to ".")
+//	reg - optional custom regex for array matching
+//
+// Returns:
+//
+//	[]string - array of standardized path components
+//
+// Examples:
+//
+//	NSStd("a.b.c", ".", nil) → ["a", "b", "c"]
+//	NSStd("users[0].address.city", ".", nil) → ["users", "[0]", "address", "city"]
+//	NSStd("data/items/0/id", "/", nil) → ["data", "items", "0", "id"]
 func NSStd(s string, sep string, reg *regexp.Regexp) []string {
 	if sep == "" {
 		sep = "."
@@ -120,4 +136,4 @@ func NSStdDotTypeKey(s string, sep string) []string {
 		}
 	}
 	return result
-} 
+}
