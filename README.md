@@ -21,6 +21,18 @@ Features:
 
 [Read more about jsonns](pkg/jsonns/README.md)
 
+### [jsonctx](pkg/jsonctx)
+
+A package for manipulating JSON data using namespace expressions. Works with nested JSON structures using dot notation and array-style indexing.
+
+Features:
+- Get JSON context using namespace notation
+- Support for nested object and array access
+- Dynamic initialization of objects and arrays
+- Flexible namespace separator configuration
+
+[Read more about jsonctx](pkg/jsonctx/README.md)
+
 ## Development
 
 ### Prerequisites
@@ -49,6 +61,7 @@ go test ./...
 
 # Run specific package tests
 go test ./pkg/jsonns
+go test ./pkg/jsonctx
 ```
 
 ## Author
