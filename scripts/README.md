@@ -201,20 +201,41 @@ git add scripts/README.md ; git commit -m "docs(core): set note opv.this.repo"
 
 
 git add LICENSE; git commit -m "docs(core): set license for this repo"
-
-git add pkg/jsonns; git commit -m "build(core): code jsonns in workspace"
-
-git add go.mod; git commit -m "build(core): set this project"
 git add CHANGELOG.md; git commit -m "docs(core): set note for changelog"
-git add README.md; git commit -m "docs(core): set readme for this repo"
-
 git add scripts ; git commit -m "build(core): put scripts for ssh.config.gh"
 
+# add pkg jsonns
+# ...
+
+# add pkg jsonctx
+# ...
+
+# del untracked files
+#...
+```
+
+## add pkg jsonns
+```bash
+git add pkg/jsonns; git commit -m "build(core): code jsonns in workspace"
+git add go.mod; git commit -m "build(core): set this project"
+git add README.md; git commit -m "docs(core): set readme for this repo"
 git add pkg/jsonns; git commit -m "docs(core): add function tip for NSStd"
+```
 
+
+
+## add pkg jsonctx
+```bash
 git add pkg/jsonctx; git commit -m "build(core): code jsonctx in workspace"
-
-git add go.mod; git commit -m "build(core): use project jsonns in workspace"
+git add go.mod; git commit -m "build(core): use project jsonctx in workspace"
 git add README.md; git commit -m "docs(core): add note for jsonctx in root readme"
+```
 
+## del untracked files
+```bash
+# 1. check what files would be deleted (dry run):
+git clean -n
+
+# 2 . delete the files:
+git clean -fd
 ```
