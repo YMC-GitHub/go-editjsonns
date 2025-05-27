@@ -195,4 +195,18 @@ git add .github/workflows; git commit -m "build(core): build in github workflow"
 
 git add CONTRIBUTING.md; git commit -m "docs(core): set note for contributing"
 git add .github/RELEASE_TEMPLATE.md ; git commit -m "docs(core): set note for release_template"
+
+git add scripts ; git commit -m "build(core): set scripts for opv this repo"
+git add scripts/README.md ; git commit -m "docs(core): set note opv.this.repo"
+
+
+git add LICENSE; git commit -m "docs(core): set license for this repo"
+
+git add pkg/jsonns; git commit -m "build(core): code jsonns in workspace"
+
+git add go.mod; git commit -m "build(core): set this project"
+git add CHANGELOG.md; git commit -m "docs(core): set note for changelog"
+git add README.md; git commit -m "docs(core): set readme for this repo"
+
+
 ```
